@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so dien thoai viettel</title>
+</head>
+<body>
+<script>
+
+
+    function isViettelNumber(str) {
+        let regexp = /^((03)+[2-9])|((09)[6-8])|(086)+[0-9]{6,7}\b$/;
+        if (regexp.test(str)) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    let array = ["0123589908", "0367901234","0987656789", "0865123568","0978888888"];
+    for (let i = 0; i < array.length; i++) {
+        if(isViettelNumber(array[i])){
+            document.write(array[i] +" is Viettel number"+ "<br>");
+        }else {
+        document.write(array[i]+" is not Viettel number"+"<br>")
+        }
+    }
+
+</script>
+</body>
+</html>
